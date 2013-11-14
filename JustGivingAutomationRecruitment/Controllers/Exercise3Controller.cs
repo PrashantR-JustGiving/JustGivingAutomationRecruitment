@@ -20,7 +20,7 @@ namespace JustGivingAutomationRecruitment.Controllers
         {
             if (MvcApplication.Exercise3SpecialRow > 0)
             {
-                @ViewBag.Exercise3Result = id == MvcApplication.Exercise3SpecialRow ? "Well done, you found the right link!" : "Sorry, you opened the wrong link!";
+                @ViewBag.Exercise3Result = id == MvcApplication.Exercise3SpecialRow ? "Well done, you opened the right link!" : "Sorry, you opened the wrong link!";
                 return View();
             }
 
