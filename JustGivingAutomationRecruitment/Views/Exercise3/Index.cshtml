@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Exercise 3</h2>
+
+
+<table>
+    <th style="padding-right: 30px">Row Number</th>
+    <th>Row Description</th>
+    @{
+    for (int i = 1; i <= 10; i++)
+    {
+        <tr>
+            <td><a href="/exercise3/result?id=@i">@i</a></td>
+            
+            @{
+                if (@i == (int) TempData["SpecialRow"])
+                {
+                    <td>JustGiving</td>
+                }
+                else
+                {
+                    <td>--</td>
+                }
+            }
+        </tr>
+    }
+    }
+</table>
