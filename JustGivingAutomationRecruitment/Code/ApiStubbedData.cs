@@ -12,7 +12,7 @@ namespace JustGivingAutomationRecruitment.Code
 
             var donationMessage = new List<string>()
                 {
-                    { "Thank you for you donation"},
+                    { "Thank you for your donation"},
                     { "Great, all the best" },
                     { "Good Luck" },
                     { "This is my 1st donation" },
