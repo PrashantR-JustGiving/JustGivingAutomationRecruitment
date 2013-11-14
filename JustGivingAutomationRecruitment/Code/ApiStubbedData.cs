@@ -15,7 +15,7 @@ namespace JustGivingAutomationRecruitment.Code
                     { "Thank you for you donation"},
                     { "Great, all the best" },
                     { "Good Luck" },
-                    { "This is my first donation" },
+                    { "This is my 1st donation" },
                     { "JustGiving rocks!"}
                    
                 };

@@ -16,13 +16,28 @@
             <td><a href="/exercise3/result?id=@i">@i</a></td>
             
             @{
+                var rowDes = new List<string>
+                    {
+                        {"JustPlay"},
+                        {"JustEat"},
+                        {"JustSmile"},
+                        {"JustTest"},
+                        {"JustJoke"},
+                        {"JustRun"},
+                        {"JustHire"},
+                        {"JustDesign"},
+                        {"JustMock"},
+                        {"JustDance"}
+                    };
+            }
+            @{
                 if (@i == (int) TempData["SpecialRow"])
                 {
                     <td>JustGiving</td>
                 }
                 else
                 {
-                    <td>--</td>
+                    <td>@rowDes[@i - 1]</td>
                 }
             }
         </tr>
