@@ -8,9 +8,7 @@ namespace JustGivingAutomationRecruitment.Controllers
         public ActionResult Index()
         {
             var random = new Random();
-            MvcApplication.Exercise3SpecialRow = random.Next(1, 10);
-
-            TempData["SpecialRow"] = MvcApplication.Exercise3SpecialRow;
+            Session["SpecialRow"] = random.Next(1, 10);
 
             return View();
         }
@@ -18,9 +16,11 @@ namespace JustGivingAutomationRecruitment.Controllers
         
         public ActionResult Result(int id)
         {
-            if (MvcApplication.Exercise3SpecialRow > 0)
+            var specialRow = (int) Session["SpecialRow"];
+
+            if (specialRow > 0)
             {
-                @ViewBag.Exercise3Result = id == MvcApplication.Exercise3SpecialRow ? "Well done, you opened the right link!" : "Sorry, you opened the wrong link!";
+                @ViewBag.Exercise3Result = id == specialRow ? "Well done, you opened the right link!" : "Sorry, you opened the wrong link!";
                 return View();
             }
 

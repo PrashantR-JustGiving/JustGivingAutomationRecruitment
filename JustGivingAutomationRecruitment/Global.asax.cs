@@ -16,7 +16,6 @@ namespace JustGivingAutomationRecruitment
     public class MvcApplication : System.Web.HttpApplication
     {
         public static List<TemporaryMembership> TemporaryMembers;
-        public static int Exercise3SpecialRow;
 
         protected void Application_Start()
         {
