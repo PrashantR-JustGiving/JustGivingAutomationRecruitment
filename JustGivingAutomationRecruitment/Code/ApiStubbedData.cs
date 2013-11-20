@@ -12,20 +12,24 @@ namespace JustGivingAutomationRecruitment.Code
 
             var donationMessage = new List<string>()
                 {
-                    { "Thank you for your donation"},
-                    { "Great, all the best" },
-                    { "Good Luck" },
-                    { "This is my 1st donation" },
-                    { "JustGiving rocks!"}
-                   
+                    {"Thank you for your donation"},
+                    {"Great, all the best"},
+                    {"Good luck"},
+                    {"This is my 1st donation"},
+                    {"JustGiving rocks!"},
+                    {"Go get em!!"},
+                    {"Run fat boy run..."},
+                    {"Showing my support"},
+                    {"Lets beat this"},
+                    {"Well done"},
                 };
 
-            for (var i = 1; i <= 5; i ++)
+            for (var i = 1; i <= random.Next(1, 10); i ++)
             {
                 donations.Add(new Donation
                     {
                         Id = i,
-                        Amount = random.Next(1, 1000),
+                        Amount = new decimal(random.Next(1, 500) * .2),
                         Message = donationMessage[i - 1]
                     });
             }
